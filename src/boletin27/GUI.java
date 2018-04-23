@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package boletin27;
 
 import java.awt.event.ActionEvent;
@@ -17,6 +12,7 @@ public class GUI extends javax.swing.JFrame implements ActionListener{
 
     String texto="";
     String numero="";
+    boolean nuevo=true;
 
     public GUI(){
         initComponents();
@@ -236,43 +232,80 @@ public class GUI extends javax.swing.JFrame implements ActionListener{
         Object o=e.getSource();
         if(o==boton1||o==boton2||o==boton3||o==boton4||o==boton5||o==boton6||o==boton7||o==boton8||o==boton9){
             if(o==boton1){
+                if(nuevo==true){
+                    texto="";
+                    nuevo=false;
+                }
                 numero=numero+boton1.getText();
                 texto=texto+boton1.getText();
                 visualizador.setText(texto);
             }else if(o==boton2){
+                if(nuevo==true){
+                    texto="";
+                    nuevo=false;
+                }
                 numero=numero+boton2.getText();
                 texto=texto+boton2.getText();
                 visualizador.setText(texto);
             }else if(o==boton3){
+                if(nuevo==true){
+                    texto="";
+                    nuevo=false;
+                }
                 numero=numero+boton3.getText();
                 texto=texto+boton3.getText();
                 visualizador.setText(texto);
             }else if(o==boton4){
+                if(nuevo==true){
+                    texto="";
+                    nuevo=false;
+                }
                 numero=numero+boton4.getText();
                 texto=texto+boton4.getText();
                 visualizador.setText(texto);
             }else if(o==boton5){
+                if(nuevo==true){
+                    texto="";
+                    nuevo=false;
+                }
                 numero=numero+boton5.getText();
                 texto=texto+boton5.getText();
                 visualizador.setText(texto);
             }else if(o==boton6){
+                if(nuevo==true){
+                    texto="";
+                    nuevo=false;
+                }
                 numero=numero+boton6.getText();
                 texto=texto+boton6.getText();
                 visualizador.setText(texto);
             }else if(o==boton7){
+                if(nuevo==true){
+                    texto="";
+                    nuevo=false;
+                }
                 numero=numero+boton7.getText();
                 texto=texto+boton7.getText();
                 visualizador.setText(texto);
             }else if(o==boton8){
+                if(nuevo==true){
+                    texto="";
+                    nuevo=false;
+                }
                 numero=numero+boton8.getText();
                 texto=texto+boton8.getText();
                 visualizador.setText(texto);
             }else{
+                if(nuevo==true){
+                    texto="";
+                    nuevo=false;
+                }
                 numero=numero+boton9.getText();
                 texto=texto+boton9.getText();
                 visualizador.setText(texto);
             }
         }else if(o==botonborrar){
+            nuevo=true;
             texto="";
             numero="";
             Memoria.numero.clear();
@@ -292,8 +325,11 @@ public class GUI extends javax.swing.JFrame implements ActionListener{
             if(numero.equals("")){
                 JOptionPane.showMessageDialog(null, "Primero debe introducir un número.");
             }else{
+                Memoria.numero.add(Float.parseFloat(numero));
+                Float resultado=Memoria.resultado();
+                numero=resultado.toString();
                 texto="";
-                visualizador.setText(texto);
+                visualizador.setText(resultado.toString());
             }
         }else if(o==botonpunto){
             texto=texto+".";
