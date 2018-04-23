@@ -7,6 +7,7 @@ package boletin27;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,6 +16,7 @@ import java.awt.event.ActionListener;
 public class GUI extends javax.swing.JFrame implements ActionListener{
 
     String texto="";
+    String numero="";
 
     public GUI(){
         initComponents();
@@ -234,51 +236,98 @@ public class GUI extends javax.swing.JFrame implements ActionListener{
         Object o=e.getSource();
         if(o==boton1||o==boton2||o==boton3||o==boton4||o==boton5||o==boton6||o==boton7||o==boton8||o==boton9){
             if(o==boton1){
+                numero=numero+boton1.getText();
                 texto=texto+boton1.getText();
                 visualizador.setText(texto);
             }else if(o==boton2){
+                numero=numero+boton2.getText();
                 texto=texto+boton2.getText();
                 visualizador.setText(texto);
             }else if(o==boton3){
+                numero=numero+boton3.getText();
                 texto=texto+boton3.getText();
                 visualizador.setText(texto);
             }else if(o==boton4){
+                numero=numero+boton4.getText();
                 texto=texto+boton4.getText();
                 visualizador.setText(texto);
             }else if(o==boton5){
+                numero=numero+boton5.getText();
                 texto=texto+boton5.getText();
                 visualizador.setText(texto);
             }else if(o==boton6){
+                numero=numero+boton6.getText();
                 texto=texto+boton6.getText();
                 visualizador.setText(texto);
             }else if(o==boton7){
+                numero=numero+boton7.getText();
                 texto=texto+boton7.getText();
                 visualizador.setText(texto);
             }else if(o==boton8){
+                numero=numero+boton8.getText();
                 texto=texto+boton8.getText();
                 visualizador.setText(texto);
             }else{
+                numero=numero+boton9.getText();
                 texto=texto+boton9.getText();
                 visualizador.setText(texto);
             }
         }else if(o==botonborrar){
             texto="";
+            numero="";
+            Memoria.numero.clear();
+            Memoria.operadores.clear();
             visualizador.setText(texto);
         }else if(o==botondiv){
-            texto=texto+"/";
-            visualizador.setText(texto);
+            if(numero.equals("")){
+                JOptionPane.showMessageDialog(null, "Primero debe introducir un número.");
+            }else{
+                Memoria.numero.add(Float.parseFloat(numero));
+                Memoria.operadores.add("/");
+                texto=texto+"/";
+                numero="";
+                visualizador.setText(texto);
+            }
         }else if(o==botonigual){
-            texto="";
-            visualizador.setText(texto);
+            if(numero.equals("")){
+                JOptionPane.showMessageDialog(null, "Primero debe introducir un número.");
+            }else{
+                texto="";
+                visualizador.setText(texto);
+            }
         }else if(o==botonpunto){
             texto=texto+".";
             visualizador.setText(texto);
         }else if(o==botonres){
-            texto=texto+"-";
-            visualizador.setText(texto);
+            if(numero.equals("")){
+                JOptionPane.showMessageDialog(null, "Primero debe introducir un número.");
+            }else{
+                Memoria.numero.add(Float.parseFloat(numero));
+                numero="";
+                Memoria.operadores.add("-");
+                texto=texto+"-";
+                visualizador.setText(texto);
+            }
         }else if(o==botonsum){
-            texto=texto+"+";
-            visualizador.setText(texto);
+            if(numero.equals("")){
+                JOptionPane.showMessageDialog(null, "Primero debe introducir un número.");
+            }else{
+                Memoria.numero.add(Float.parseFloat(numero));
+                numero="";
+                Memoria.operadores.add("+");
+                texto=texto+"+";
+                visualizador.setText(texto);
+            }
+        }else if(o==botonmul){
+            if(numero.equals("")){
+                JOptionPane.showMessageDialog(null, "Primero debe introducir un número.");
+            }else{
+                Memoria.numero.add(Float.parseFloat(numero));
+                numero="";
+                Memoria.operadores.add("*");
+                texto=texto+"*";
+                visualizador.setText(texto);
+            }
         }
     }
 }
