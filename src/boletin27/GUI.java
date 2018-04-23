@@ -16,6 +16,7 @@ public class GUI extends javax.swing.JFrame implements ActionListener{
 
     public GUI(){
         initComponents();
+        this.setLocationRelativeTo(this);
         boton1.addActionListener(this);
         boton2.addActionListener(this);
         boton3.addActionListener(this);
@@ -336,6 +337,7 @@ public class GUI extends javax.swing.JFrame implements ActionListener{
         }else if(o==botonpunto){
             texto=texto+".";
             visualizador.setText(texto);
+            numero=numero+".";
         }else if(o==botonres){
             if(numero.equals("")){
                 JOptionPane.showMessageDialog(null, "Primero debe introducir un número.");
