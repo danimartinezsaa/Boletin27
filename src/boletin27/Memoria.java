@@ -14,7 +14,6 @@ import java.util.ArrayList;
 public class Memoria{
     static ArrayList<Float> numero=new ArrayList();
     static ArrayList<String> operadores=new ArrayList();
-    //1 - resta 2 - suma 3 - multiplicacion 4 - division
     
     public static Float resultado(){
 

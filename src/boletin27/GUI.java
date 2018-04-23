@@ -327,9 +327,11 @@ public class GUI extends javax.swing.JFrame implements ActionListener{
             }else{
                 Memoria.numero.add(Float.parseFloat(numero));
                 Float resultado=Memoria.resultado();
+                Memoria.numero.clear();
+                Memoria.operadores.clear();
                 numero=resultado.toString();
-                texto="";
-                visualizador.setText(resultado.toString());
+                texto=numero;
+                visualizador.setText(texto);
             }
         }else if(o==botonpunto){
             texto=texto+".";
