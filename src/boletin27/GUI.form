@@ -30,13 +30,22 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
+                              <Component id="boton0" min="-2" pref="64" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="botonpunto" min="-2" pref="64" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="botonigual" min="-2" pref="64" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="botonmul" min="-2" pref="64" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="boton4" min="-2" pref="64" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="boton5" min="-2" pref="64" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="boton6" min="-2" pref="64" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="botonigual" min="-2" pref="64" max="-2" attributes="0"/>
+                              <Component id="botonsum" min="-2" pref="64" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="boton1" min="-2" pref="64" max="-2" attributes="0"/>
@@ -45,7 +54,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="boton3" min="-2" pref="64" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="botonpunto" min="-2" pref="64" max="-2" attributes="0"/>
+                              <Component id="botondiv" min="-2" pref="64" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="boton7" min="-2" pref="64" max="-2" attributes="0"/>
@@ -54,17 +63,9 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="boton9" min="-2" pref="64" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="botonborrar" min="-2" pref="64" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="botondiv" min="-2" pref="64" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="botonmul" min="-2" pref="64" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="botonsum" min="-2" pref="64" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="botonres" min="-2" pref="64" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="botonborrar" alignment="0" min="-2" pref="274" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
                   </Group>
@@ -78,35 +79,39 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="visualizador" min="-2" pref="88" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="botondiv" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
-                  <Component id="botonmul" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
-                  <Component id="botonsum" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
-                  <Component id="botonres" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="botonborrar" min="-2" pref="43" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="boton7" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
                   <Component id="boton8" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
                   <Component id="boton9" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
-                  <Component id="botonborrar" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
+                  <Component id="botonres" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="boton4" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
                   <Component id="boton5" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
-                  <Component id="boton6" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
-                  <Component id="botonigual" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
+                  <Component id="boton6" alignment="0" min="-2" pref="64" max="-2" attributes="0"/>
+                  <Component id="botonsum" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="boton1" alignment="0" max="32767" attributes="0"/>
-                  <Component id="boton2" max="32767" attributes="0"/>
-                  <Component id="botonpunto" alignment="1" pref="64" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="boton2" alignment="0" max="32767" attributes="0"/>
+                  <Component id="boton1" max="32767" attributes="0"/>
+                  <Component id="botondiv" alignment="1" pref="64" max="32767" attributes="0"/>
                   <Component id="boton3" alignment="1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="botonpunto" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
+                      <Component id="botonigual" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
+                      <Component id="botonmul" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="boton0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace pref="13" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -197,6 +202,11 @@
     <Component class="javax.swing.JButton" name="botonpunto">
       <Properties>
         <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="boton0">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
     </Component>
   </SubComponents>
